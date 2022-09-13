@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\TgBot"
+    "\\TgBot",
+    "\\TgBot\\bin",
+    "\\TgBot\\obj"
   ],
-  "SelectedNode": "\\TgBot",
+  "SelectedNode": "\\TgBot\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

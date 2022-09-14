@@ -10,7 +10,7 @@ using var cts = new CancellationTokenSource();
 
 var receiverOptions = new Telegram.Bot.Extensions.Polling.ReceiverOptions
 {
-    AllowedUpdates = {} // receive all update types
+    AllowedUpdates = {} 
 };
 botClient.StartReceiving(
     updateHandler: HandleUpdateAsync,
@@ -27,23 +27,20 @@ cts.Cancel();
 
 async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
 {
-    if (update.Message is not { } msg)
+    //https://win10tweaker.ru/forum/topic/как-это-работает
+    if (update.Message is not { } message) // is not null message 
        return;
   
-    if (msg.Text is not { } messageText)
+    if (message.Text is not { } messageText) // is not null message Text
        return;
 
-    var message = update.Message;
-    if (message.Text != null)
+    if (message.Text.ToLower() == "/start")
     {
-        if (message.Text.ToLower() == "/start")
-        {
-            await botClient.SendTextMessageAsync(message.Chat.Id, "Привет я нахожусь в разработке)");
-            return;
-        }
-        await botClient.SendTextMessageAsync(message.Chat.Id, "Да я до сих пор в разработке");
+         await botClient.SendTextMessageAsync(message.Chat.Id, "Привет я нахожусь в разработке)");
+         return;
     }
-    return;
+    await botClient.SendTextMessageAsync(message.Chat.Id, "Да я до сих пор в разработке");
+    
 }
 
 Task HandlePollingErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)

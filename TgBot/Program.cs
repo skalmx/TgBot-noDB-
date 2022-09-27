@@ -1,11 +1,14 @@
 ﻿using Telegram.Bot;
 using Telegram.Bot.Polling;
+using TgBot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Extensions.Polling;
 using Telegram.Bot.Exceptions;
 using Telegram.Bot.Types.ReplyMarkups;
 
-ITelegramBotClient botClient = new TelegramBotClient("5521913177:AAFrPUb0CMxHB0zxXWnsr77WlueIh-tlBXw");
+
+
+ITelegramBotClient botClient = new TelegramBotClient(BotCongiguration.botToken);
 
 using var cancellationTokenSource = new CancellationTokenSource();
 

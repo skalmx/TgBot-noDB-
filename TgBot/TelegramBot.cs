@@ -11,12 +11,13 @@ using Telegram.Bot.Exceptions;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
 using System.Threading;
+using System.Configuration;
 
 namespace TgBot
 {
     public class TelegramBot
     {
-        public static ITelegramBotClient botClient = new TelegramBotClient(BotCongiguration.botToken);
+        public static ITelegramBotClient botClient = new TelegramBotClient(ConfigurationManager.AppSettings["token"]!);
         public static CancellationTokenSource cancellationToken = new CancellationTokenSource();
         public static Telegram.Bot.Polling.ReceiverOptions receiverOptions = new Telegram.Bot.Polling.ReceiverOptions()
         {
@@ -29,11 +30,13 @@ namespace TgBot
               pollingErrorHandler: HandlePollingErrorAsync,
               cancellationToken: cancellationToken.Token
             );
+
             var me = await botClient.GetMeAsync();
 
             Console.WriteLine($"Start listening for @{me.Username}");
             Console.ReadLine();
 
+            cancellationToken.Cancel();
         }
         public static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {

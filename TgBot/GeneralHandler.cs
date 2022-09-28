@@ -21,7 +21,7 @@ namespace TgBot
                 return;
 
 
-            ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
+           /* ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
             {
                 new KeyboardButton[] { "Exapmple1", "Exapmple2" }
             })
@@ -39,7 +39,7 @@ namespace TgBot
                     cancellationToken: cancellationToken
                     );
                 return;
-            }
+            }*/
             await botClient.SendTextMessageAsync(message.Chat.Id, "Да я до сих пор в разработке");
 
         }

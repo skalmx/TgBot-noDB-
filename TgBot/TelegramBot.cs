@@ -27,7 +27,7 @@ namespace TgBot
         {
             botClient.StartReceiving(
               updateHandler: GeneralHandler.HandleUpdateAsync,
-              pollingErrorHandler: HandlePollingErrorAsync,
+              pollingErrorHandler: ErrorHandler.HandlePollingErrorAsync,
               cancellationToken: cancellationToken.Token
             );
 
@@ -39,17 +39,5 @@ namespace TgBot
             cancellationToken.Cancel();
         }
         
-        public static Task HandlePollingErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
-        {
-            var ErrorMessage = exception switch
-            {
-                ApiRequestException apiRequestException
-                    => $"Telegram API Error:\n[{apiRequestException.ErrorCode}]\n{apiRequestException.Message}",
-                _ => exception.ToString()
-            };
-
-            Console.WriteLine(ErrorMessage);
-            return Task.CompletedTask;
-        }
     }
 }

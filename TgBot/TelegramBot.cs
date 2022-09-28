@@ -17,16 +17,16 @@ namespace TgBot
 {
     public class TelegramBot
     {
-        public static ITelegramBotClient botClient = new TelegramBotClient(ConfigurationManager.AppSettings["token"]!);
-        public static CancellationTokenSource cancellationToken = new CancellationTokenSource();
-        public static Telegram.Bot.Polling.ReceiverOptions receiverOptions = new Telegram.Bot.Polling.ReceiverOptions()
+        public static ITelegramBotClient botClient = new TelegramBotClient(ConfigurationManager.AppSettings["token"]!);// токен берется с конфигурационного файла 
+        public static CancellationTokenSource cancellationToken = new CancellationTokenSource(); 
+        public static Telegram.Bot.Polling.ReceiverOptions receiverOptions = new Telegram.Bot.Polling.ReceiverOptions() 
         {
-            AllowedUpdates = Array.Empty<UpdateType>()
+            AllowedUpdates = Array.Empty<UpdateType>() // позволяет получать все типы updates
         };
         public static async Task Main()
         {
             botClient.StartReceiving(
-              updateHandler: HandleUpdateAsync,
+              updateHandler: GeneralHandler.HandleUpdateAsync,
               pollingErrorHandler: HandlePollingErrorAsync,
               cancellationToken: cancellationToken.Token
             );
@@ -38,39 +38,7 @@ namespace TgBot
 
             cancellationToken.Cancel();
         }
-        public static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
-        {
-            //https://win10tweaker.ru/forum/topic/как-это-работает
-            if (update.Message is not { } message) // is not null message 
-                return;
-
-            if (message.Text is not { } messageText) // is not null message Text
-                return;
-            
-
-            ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
-            {
-                new KeyboardButton[] { "Exapmple1", "Exapmple2" }
-            })
-                {
-                    ResizeKeyboard = true
-                };
-
-            if (message.Text.ToLower() == "/start")
-            {
-                await botClient.SendTextMessageAsync(
-                    chatId: message.Chat.Id,
-                    text: "Привет, рад тебя видеть! Как я могу тебе помочь?",
-                    disableNotification: true,
-                    replyMarkup: replyKeyboardMarkup,
-                    cancellationToken: cancellationToken
-                    );
-                return;
-            }
-            await botClient.SendTextMessageAsync(message.Chat.Id, "Да я до сих пор в разработке");
-
-        }
-
+        
         public static Task HandlePollingErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
         {
             var ErrorMessage = exception switch

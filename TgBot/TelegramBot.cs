@@ -17,7 +17,7 @@ namespace TgBot
 {
     public class TelegramBot
     {
-        public static ITelegramBotClient botClient = new TelegramBotClient(ConfigurationManager.AppSettings["token"]!);// токен берется с конфигурационного файла 
+        public static TelegramBotClient botClient = new TelegramBotClient(ConfigurationManager.AppSettings["token"]!);// токен берется с конфигурационного файла 
         public static CancellationTokenSource cancellationToken = new CancellationTokenSource(); 
         public static Telegram.Bot.Polling.ReceiverOptions receiverOptions = new Telegram.Bot.Polling.ReceiverOptions() 
         {

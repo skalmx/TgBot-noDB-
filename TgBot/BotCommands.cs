@@ -9,13 +9,15 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 namespace TgBot
 {
-    internal class BotComands
+    internal class BotCommands
     {
-        private string _keyword = "";
-        
-        public static async void StartComand(ITelegramBotClient botClient, Chat chat)
+        public static async void StartCommand(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(chat.Id, "qq");
+        }
+        public static async void LegsCommand(ITelegramBotClient botClient, Chat chat)
+        {
+            await botClient.SendTextMessageAsync(chat.Id, "legs");
         }
     }
 }

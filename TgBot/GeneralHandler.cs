@@ -26,8 +26,8 @@ namespace TgBot
 
             Dictionary<string,Action<ITelegramBotClient,Chat>> commands = new Dictionary<string, Action<ITelegramBotClient, Chat>>()
             {
-                { "/start", new Action<ITelegramBotClient, Chat>(BotCommands.StartCommand) },
-                { "/legs", new Action<ITelegramBotClient, Chat>(BotCommands.LegsCommand) }
+                { "/start", new Action<ITelegramBotClient, Chat>(CustomCommands.StartCommand) },
+                { "/legs", new Action<ITelegramBotClient, Chat>(CustomCommands.LegsCommand) }
             };
 
             if (commands.ContainsKey(messageText.ToLower()))

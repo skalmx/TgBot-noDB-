@@ -9,7 +9,7 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 namespace TgBot
 {
-    internal class BotCommands
+    internal class CustomCommands
     {
         public static async void StartCommand(ITelegramBotClient botClient, Chat chat)
         {

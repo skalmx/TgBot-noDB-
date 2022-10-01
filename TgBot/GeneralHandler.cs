@@ -16,9 +16,9 @@ namespace TgBot
         public static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
             
-            if (update!.Message!.Type != MessageType.Text)
+            if (update.Message!.Type != MessageType.Text)
             {
-                CustomCommands.Help(botClient, update!.Message!.Chat);
+                CustomCommands.Help(botClient, update.Message!.Chat);
             }
            
             if (update.Message is not { } message) // is not null message 
@@ -27,7 +27,7 @@ namespace TgBot
             if (message.Text is not { } messageText) // is not null message Text
                 return;
 
-            Console.WriteLine($"{message.Chat.Username ?? message.Chat.FirstName} wrote {message.Text}"); // message.Chat.Username ?? message.Chat.FirstName - имя собеседника
+            Console.WriteLine($"{message.Chat.Username ?? message.Chat.FirstName} wrote {messageText}"); // message.Chat.Username ?? message.Chat.FirstName - имя собеседника
 
             Dictionary<string,Action<ITelegramBotClient,Chat>> commands = new Dictionary<string, Action<ITelegramBotClient, Chat>>()
             {

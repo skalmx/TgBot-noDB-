@@ -13,7 +13,12 @@ namespace TgBot
     {
         public static async void Start(ITelegramBotClient botClient, Chat chat)
         {
-            await botClient.SendTextMessageAsync(chat.Id, "StartCommand");
+
+            await botClient.SendTextMessageAsync(
+                chatId : chat.Id,
+                text: "StartCommand",
+                replyMarkup: Keyboards.GetStartKeyboard()
+                );
         }
         public static async void Help(ITelegramBotClient botClient, Chat chat)
         {

@@ -26,15 +26,19 @@ namespace TgBot
         }
         public static async void Github(ITelegramBotClient botClient, Chat chat)
         {
-            await botClient.SendTextMessageAsync(chat.Id, "GithubCommand");
+            await botClient.SendTextMessageAsync(
+                chatId: chat.Id,
+                text: "Держи ссылку на мой GitHub профиль👇",
+                replyMarkup: Keyboards.GetGithubKeyboard()
+                );
         }
         public static async void Refresh(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(
                 chatId: chat.Id,
-                text: "Ваша Клавиатура перезагружена🤗👇",
+                text: "Ваша клавиатура перезагружена🤗👇",
                 replyMarkup: Keyboards.GetTestKeyboard()
                 );
         }
     }
-}
+}   

@@ -37,5 +37,17 @@ namespace TgBot
             };
             return replyKeyboardMarkup;
         }
+        public static InlineKeyboardMarkup GetGithubKeyboard()
+        {
+            InlineKeyboardMarkup inlineKeyboardMarkup = new(new[]
+            {
+                InlineKeyboardButton.WithUrl(
+                    text: "Мой Github",
+                    url: "https://github.com/skalmx"
+                    )
+            });
+            return inlineKeyboardMarkup;
+        }
+
     }
 }

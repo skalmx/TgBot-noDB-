@@ -30,7 +30,11 @@ namespace TgBot
         }
         public static async void Refresh(ITelegramBotClient botClient, Chat chat)
         {
-            await botClient.SendTextMessageAsync(chat.Id, "RefreshCommand");
+            await botClient.SendTextMessageAsync(
+                chatId: chat.Id,
+                text: "Ваша Клавиатура перезагружена🤗👇",
+                replyMarkup: Keyboards.GetTestKeyboard()
+                );
         }
     }
 }

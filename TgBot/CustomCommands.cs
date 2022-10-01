@@ -13,11 +13,19 @@ namespace TgBot
     {
         public static async void StartCommand(ITelegramBotClient botClient, Chat chat)
         {
-            await botClient.SendTextMessageAsync(chat.Id, "qq");
+            await botClient.SendTextMessageAsync(chat.Id, "StartCommand");
         }
-        public static async void LegsCommand(ITelegramBotClient botClient, Chat chat)
+        public static async void HelpCommand(ITelegramBotClient botClient, Chat chat)
         {
-            await botClient.SendTextMessageAsync(chat.Id, "legs");
+            await botClient.SendTextMessageAsync(chat.Id, "HelpCommand");
+        }
+        public static async void GithubCommand(ITelegramBotClient botClient, Chat chat)
+        {
+            await botClient.SendTextMessageAsync(chat.Id, "GithubCommand");
+        }
+        public static async void RefreshCommand(ITelegramBotClient botClient, Chat chat)
+        {
+            await botClient.SendTextMessageAsync(chat.Id, "RefreshCommand");
         }
     }
 }

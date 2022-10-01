@@ -18,7 +18,7 @@ namespace TgBot
             
             if (update!.Message!.Type != MessageType.Text)
             {
-                CustomCommands.HelpCommand(botClient, update!.Message!.Chat);
+                CustomCommands.Help(botClient, update!.Message!.Chat);
             }
            
             if (update.Message is not { } message) // is not null message 
@@ -31,10 +31,10 @@ namespace TgBot
 
             Dictionary<string,Action<ITelegramBotClient,Chat>> commands = new Dictionary<string, Action<ITelegramBotClient, Chat>>()
             {
-                { "/start",  new Action<ITelegramBotClient, Chat>(CustomCommands.StartCommand) },
-                { "/refresh",  new Action<ITelegramBotClient, Chat>(CustomCommands.RefreshCommand) },
-                { "/help",  new Action<ITelegramBotClient, Chat>(CustomCommands.HelpCommand) },
-                { "/github",  new Action<ITelegramBotClient, Chat>(CustomCommands.GithubCommand) }
+                { "/start",  new Action<ITelegramBotClient, Chat>(CustomCommands.Start) },
+                { "/refresh",  new Action<ITelegramBotClient, Chat>(CustomCommands.Refresh) },
+                { "/help",  new Action<ITelegramBotClient, Chat>(CustomCommands.Help) },
+                { "/github",  new Action<ITelegramBotClient, Chat>(CustomCommands.Github) }
             };
                 
             if (commands.ContainsKey(messageText.ToLower()))

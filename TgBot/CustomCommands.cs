@@ -11,19 +11,19 @@ namespace TgBot
 {
     internal class CustomCommands
     {
-        public static async void StartCommand(ITelegramBotClient botClient, Chat chat)
+        public static async void Start(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(chat.Id, "StartCommand");
         }
-        public static async void HelpCommand(ITelegramBotClient botClient, Chat chat)
+        public static async void Help(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(chat.Id, "HelpCommand");
         }
-        public static async void GithubCommand(ITelegramBotClient botClient, Chat chat)
+        public static async void Github(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(chat.Id, "GithubCommand");
         }
-        public static async void RefreshCommand(ITelegramBotClient botClient, Chat chat)
+        public static async void Refresh(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(chat.Id, "RefreshCommand");
         }

@@ -13,6 +13,12 @@ namespace TgBot
         public static async void Chest(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(chat.Id, "chestButton is pressed");
+            //await botClient.SendVideoAsync(
+              //  chatId: chat.Id,
+                //video: "",
+               // replyMarkup:
+                //);
+                
         }
         public static async void Back(ITelegramBotClient botClient, Chat chat)
         {
@@ -30,10 +36,7 @@ namespace TgBot
         {
             await botClient.SendTextMessageAsync(chat.Id, "tricepsButton is pressed");
         }
-        public static async void Deltoid(ITelegramBotClient botClient, Chat chat)
-        {
-            await botClient.SendTextMessageAsync(chat.Id, "deltoidButton is pressed");
-        }
+        
         public static async void Abs(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(chat.Id, "absButton is pressed");

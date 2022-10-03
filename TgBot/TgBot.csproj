@@ -14,4 +14,8 @@
     <PackageReference Include="Telegram.Bot.Extensions.Polling" Version="1.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="videos\" />
+  </ItemGroup>
+
 </Project>

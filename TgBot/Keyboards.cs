@@ -16,21 +16,8 @@ namespace TgBot
             ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
             {
                 new KeyboardButton[] { "Грудь", "Спина", "Трапеция" },
-                new KeyboardButton[] { "Бицепс", "Трицепс", "Дельта" },
-                new KeyboardButton[] { "Пресс", "Икры", "Бедра" }
-            })
-            {
-                ResizeKeyboard = true
-            };
-            return replyKeyboardMarkup;
-        }
-        public static ReplyKeyboardMarkup GetTestKeyboard()
-        {
-            ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
-            {
-                new KeyboardButton[] { "test", "Спина", "Трапеция" },
-                new KeyboardButton[] { "test", "Трицепс", "Дельта" },
-                new KeyboardButton[] { "test", "Икры", "Бедра" }
+                new KeyboardButton[] { "Пресс", "Икры", "Бедра" },
+                new KeyboardButton[] { "Трицепс", "Бицепс" }
             })
             {
                 ResizeKeyboard = true

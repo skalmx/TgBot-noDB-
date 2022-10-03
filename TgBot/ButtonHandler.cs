@@ -10,16 +10,21 @@ namespace TgBot
 {
     internal class ButtonHandler
     {
-        string path = Directory.GetParent(Environment.CurrentDirectory)!.Parent!.Parent!.FullName + @"\videos\Выпады.mp4";
-       
         public static async void Chest(ITelegramBotClient botClient, Chat chat)
         {
+            /*string path = Directory.GetParent(Environment.CurrentDirectory)!.Parent!.Parent!.FullName + @"\videos\Выпады.mp4";
             await botClient.SendTextMessageAsync(chat.Id, "chestButton is pressed");
-            using (var stream = System.IO.File.OpenRead(Directory.GetParent(Environment.CurrentDirectory)!.Parent!.Parent!.FullName + @"\videos\Выпады.mp4"))
+            using (var stream = System.IO.File.OpenRead(path))
                 await botClient.SendVideoAsync(
                     chatId: chat.Id,
                     video: stream!
-                    );   
+                    );*/
+            await botClient.SendTextMessageAsync(
+                chatId: chat.Id,
+                text: "chest",
+                replyMarkup: Keyboards.GetChestKeyboard()
+                );
+
         }
         public static async void Back(ITelegramBotClient botClient, Chat chat)
         {

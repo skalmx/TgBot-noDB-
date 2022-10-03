@@ -53,8 +53,6 @@ namespace TgBot
             {
                await Task.Run(()=> CustomCommands.Help(botClient, message.Chat));
             }
-            Console.WriteLine(Directory.GetParent(Environment.CurrentDirectory)!.Parent!.Parent!.FullName + @"\videos"); // Способ для динамического определения пути проекта
-            
         }
       
     }

@@ -35,6 +35,19 @@ namespace TgBot
             });
             return inlineKeyboardMarkup;
         }
-
+        public static ReplyKeyboardMarkup GetChestKeyboard()
+        {
+            ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
+            {
+                new KeyboardButton[] { "Жим лежа" },
+                new KeyboardButton[] { "Отжимания на брусьях" },
+                new KeyboardButton[] { "Разведение гантелей" },
+                new KeyboardButton[] { "Назад" }
+            })
+            {
+                ResizeKeyboard = true
+            };
+            return replyKeyboardMarkup;
+        }
     }
 }

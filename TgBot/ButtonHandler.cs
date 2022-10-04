@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
+using Telegram.Bot.Types.InputFiles;
+using System.IO;
 
 namespace TgBot
 {
@@ -12,13 +14,18 @@ namespace TgBot
     {
         public static async void Chest(ITelegramBotClient botClient, Chat chat)
         {
-            /*string path = Directory.GetParent(Environment.CurrentDirectory)!.Parent!.Parent!.FullName + @"\videos\Выпады.mp4";
+            string path = Directory.GetParent(Environment.CurrentDirectory)!.Parent!.Parent!.FullName + @"\videos\Выпады.mp4";
+            
             await botClient.SendTextMessageAsync(chat.Id, "chestButton is pressed");
             using (var stream = System.IO.File.OpenRead(path))
+            {
+                
                 await botClient.SendVideoAsync(
                     chatId: chat.Id,
-                    video: stream!
-                    );*/
+                    video: stream!,
+                    supportsStreaming: true
+                    );
+            }
             await botClient.SendTextMessageAsync(
                 chatId: chat.Id,
                 text: "chest",

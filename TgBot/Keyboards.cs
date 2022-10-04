@@ -49,5 +49,102 @@ namespace TgBot
             };
             return replyKeyboardMarkup;
         }
+        public static ReplyKeyboardMarkup GetBackKeyboard()
+        {
+            ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
+            {
+                new KeyboardButton[] { "Гиперэкстензия" },
+                new KeyboardButton[] { "Тяга штанги в наклоне" },
+                new KeyboardButton[] { "Подтягивания" },
+                new KeyboardButton[] { "Назад" }
+            })
+            {
+                ResizeKeyboard = true
+            };
+            return replyKeyboardMarkup;
+        }
+        public static ReplyKeyboardMarkup GetTrapeziumKeyboard()
+        {
+            ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
+            {
+                new KeyboardButton[] { "Становая тяга" },
+                new KeyboardButton[] { "Тяга троса сидя" },
+                new KeyboardButton[] { "Пожимания плечами" },
+                new KeyboardButton[] { "Назад" }
+            })
+            {
+                ResizeKeyboard = true
+            };
+            return replyKeyboardMarkup;
+        }
+        public static ReplyKeyboardMarkup GetBicepsKeyboard()
+        {
+            ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
+            {
+                new KeyboardButton[] { "Концентрированный подъем" },
+                new KeyboardButton[] { "Подтягивания обратным хватом" },
+                new KeyboardButton[] { "Подъем штанги" },
+                new KeyboardButton[] { "Назад" }
+            })
+            {
+                ResizeKeyboard = true
+            };
+            return replyKeyboardMarkup;
+        }
+        public static ReplyKeyboardMarkup GetTricepsKeyboard()
+        {
+            ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
+            {
+                new KeyboardButton[] { "Разгибания на блоке" },
+                new KeyboardButton[] { "Отжимания от скамьи" },
+                new KeyboardButton[] { "Разгибание над головой" },
+                new KeyboardButton[] { "Назад" }
+            })
+            {
+                ResizeKeyboard = true
+            };
+            return replyKeyboardMarkup;
+        }
+        public static ReplyKeyboardMarkup GetAbsKeyboard()
+        {
+            ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
+            {
+                new KeyboardButton[] { "Подъем ног на перекладине" },
+                new KeyboardButton[] { "Скручивания" },
+                new KeyboardButton[] { "Русский твист" },
+                new KeyboardButton[] { "Назад" }
+            })
+            {
+                ResizeKeyboard = true
+            };
+            return replyKeyboardMarkup;
+        }
+        public static ReplyKeyboardMarkup GetCalfKeyboard()
+        {
+            ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
+            {
+                new KeyboardButton[] { "Подъемы на носки" },
+                new KeyboardButton[] { "Подъемы с весом на коленях" },
+                new KeyboardButton[] { "Назад" }
+            })
+            {
+                ResizeKeyboard = true
+            };
+            return replyKeyboardMarkup;
+        }
+        public static ReplyKeyboardMarkup GetHipsKeyboard()
+        {
+            ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
+            {
+                new KeyboardButton[] { "Выпады" },
+                new KeyboardButton[] { "Приседания со штангой" },
+                new KeyboardButton[] { "Разгибания ног сидя" },
+                new KeyboardButton[] { "Назад" }
+            })
+            {
+                ResizeKeyboard = true
+            };
+            return replyKeyboardMarkup;
+        }
     }
 }

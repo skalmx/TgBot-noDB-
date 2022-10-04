@@ -41,7 +41,7 @@ namespace TgBot
                 { "грудь", new Action<ITelegramBotClient, Chat>(ChestButtonsHandler.Chest) },
                 { "спина", new Action<ITelegramBotClient, Chat>(BackButtonsHandler.Back) },
                 { "трапеция", new Action<ITelegramBotClient, Chat>(TrapeziumButtonsHandler.Trapezium) },
-                { "бицепс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Biceps) },
+                { "бицепс", new Action<ITelegramBotClient, Chat>(BicepsButtonsHandler.Biceps) },
                 { "трицепс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Triceps) },
                 { "пресс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Abs) },
                 { "икры", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Calf) },
@@ -54,7 +54,10 @@ namespace TgBot
                 { "cтановая тяга", new Action<ITelegramBotClient, Chat>(TrapeziumButtonsHandler.Deadlift) },
                 { "тяга троса сидя", new Action<ITelegramBotClient, Chat>(TrapeziumButtonsHandler.SeatedCableRow) },
                 { "пожимания плечами", new Action<ITelegramBotClient, Chat>(TrapeziumButtonsHandler.Shrug) },
-               
+                { "концентрированный подъем", new Action<ITelegramBotClient, Chat>(BicepsButtonsHandler.ConcentrationCurl) },
+                { "подтягивания обратным хватом", new Action<ITelegramBotClient, Chat>(BicepsButtonsHandler.ChinUps) },
+                { "подъем штанги", new Action<ITelegramBotClient, Chat>(BicepsButtonsHandler.Curl) },
+
             };
 
             if (commands.ContainsKey(messageText.ToLower()))

@@ -43,7 +43,7 @@ namespace TgBot
                 { "трапеция", new Action<ITelegramBotClient, Chat>(TrapeziumButtonsHandler.Trapezium) },
                 { "бицепс", new Action<ITelegramBotClient, Chat>(BicepsButtonsHandler.Biceps) },
                 { "трицепс", new Action<ITelegramBotClient, Chat>(TricepsButtonsHandler.Triceps) },
-                { "пресс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Abs) },
+                { "пресс", new Action<ITelegramBotClient, Chat>(AbsButtonsHandler.Abs) },
                 { "икры", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Calf) },
                 { "жим лежа", new Action<ITelegramBotClient, Chat>(ChestButtonsHandler.BenchPress) },
                 { "отжимания на брусьях", new Action<ITelegramBotClient, Chat>(ChestButtonsHandler.Dips) },
@@ -60,10 +60,10 @@ namespace TgBot
                 { "разгибания на блоке", new Action<ITelegramBotClient, Chat>(TricepsButtonsHandler.CablePushdown) },
                 { "отжимания от скамьи", new Action<ITelegramBotClient, Chat>(TricepsButtonsHandler.Dips) },
                 { "разгибание над головой", new Action<ITelegramBotClient, Chat>(TricepsButtonsHandler.OverheadExtension) },
+                { "подъем ног на перекладине", new Action<ITelegramBotClient, Chat>(AbsButtonsHandler.HangingKneeRaise) },
+                { "скручивания", new Action<ITelegramBotClient, Chat>(AbsButtonsHandler.Crunches) },
+                { "русский твист", new Action<ITelegramBotClient, Chat>(AbsButtonsHandler.Twist) },
 
-                { "разгибание над головой", new Action<ITelegramBotClient, Chat>(TricepsButtonsHandler.OverheadExtension) },
-                { "разгибание над головой", new Action<ITelegramBotClient, Chat>(TricepsButtonsHandler.OverheadExtension) },
-                { "разгибание над головой", new Action<ITelegramBotClient, Chat>(TricepsButtonsHandler.OverheadExtension) },
             };
 
             if (commands.ContainsKey(messageText.ToLower()))

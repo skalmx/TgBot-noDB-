@@ -48,6 +48,9 @@ namespace TgBot
                 { "жим лежа", new Action<ITelegramBotClient, Chat>(ChestButtonsHandler.BenchPress) },
                 { "отжимания на брусьях", new Action<ITelegramBotClient, Chat>(ChestButtonsHandler.Dips) },
                 { "разведение гантелей", new Action<ITelegramBotClient, Chat>(ChestButtonsHandler.Flys) },
+                { "гиперэкстензия", new Action<ITelegramBotClient, Chat>(BackButtonsHandler.Hyperextension) },
+                { "тяга штанги в наклоне", new Action<ITelegramBotClient, Chat>(BackButtonsHandler.BentOverRows) },
+                { "подтягивания", new Action<ITelegramBotClient, Chat>(BackButtonsHandler.PullUps) },
             };
 
             if (commands.ContainsKey(messageText.ToLower()))

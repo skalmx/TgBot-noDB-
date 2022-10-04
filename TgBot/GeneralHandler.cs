@@ -37,14 +37,14 @@ namespace TgBot
                 { "/refresh", new Action<ITelegramBotClient, Chat>(CustomCommands.Refresh) },
                 { "/help", new Action<ITelegramBotClient, Chat>(CustomCommands.Help) },
                 { "/github", new Action<ITelegramBotClient, Chat>(CustomCommands.Github) },
-                { "грудь", new Action<ITelegramBotClient, Chat>(ButtonHandler.Chest) },
-                { "спина", new Action<ITelegramBotClient, Chat>(ButtonHandler.Back) },
-                { "трапеция", new Action<ITelegramBotClient, Chat>(ButtonHandler.Trapezium) },
-                { "бицепс", new Action<ITelegramBotClient, Chat>(ButtonHandler.Biceps) },
-                { "трицепс", new Action<ITelegramBotClient, Chat>(ButtonHandler.Triceps) },
-                { "пресс", new Action<ITelegramBotClient, Chat>(ButtonHandler.Abs) },
-                { "икры", new Action<ITelegramBotClient, Chat>(ButtonHandler.Calf) },
-                { "бедра", new Action<ITelegramBotClient, Chat>(ButtonHandler.Hips) },
+                { "грудь", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Chest) },
+                { "спина", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Back) },
+                { "трапеция", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Trapezium) },
+                { "бицепс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Biceps) },
+                { "трицепс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Triceps) },
+                { "пресс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Abs) },
+                { "икры", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Calf) },
+                { "бедра", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Hips) },
             };
 
             if (commands.ContainsKey(messageText.ToLower()))

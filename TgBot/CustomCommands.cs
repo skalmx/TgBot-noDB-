@@ -36,7 +36,7 @@ namespace TgBot
         {
             await botClient.SendTextMessageAsync(
                 chatId: chat.Id,
-                text: "Ваша кжлавиатура перезагружена🤗👇",
+                text: "Ваша клавиатура перезагружена🤗👇",
                 replyMarkup: Keyboards.GetStartKeyboard()
                 );
         }

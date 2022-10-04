@@ -10,14 +10,14 @@ using System.IO;
 
 namespace TgBot
 {
-    internal class ButtonHandler
+    internal class StartButtonsHandler
     {
         public static async void Chest(ITelegramBotClient botClient, Chat chat)
         {
             string path = Directory.GetParent(Environment.CurrentDirectory)!.Parent!.Parent!.FullName + @"\videos\Выпады.mp4";
             
             await botClient.SendTextMessageAsync(chat.Id, "chestButton is pressed");
-            using (var stream = System.IO.File.OpenRead(path))
+           /* using (var stream = System.IO.File.OpenRead(path))
             {
                 
                 await botClient.SendVideoAsync(
@@ -30,7 +30,7 @@ namespace TgBot
                 chatId: chat.Id,
                 text: "chest",
                 replyMarkup: Keyboards.GetChestKeyboard()
-                );
+                );*/
 
         }
         public static async void Back(ITelegramBotClient botClient, Chat chat)

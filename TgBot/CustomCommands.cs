@@ -40,5 +40,13 @@ namespace TgBot
                 replyMarkup: Keyboards.GetStartKeyboard()
                 );
         }
+        public static async void GetBack(ITelegramBotClient botClient, Chat chat)
+        {
+            await botClient.SendTextMessageAsync(
+                chatId: chat.Id,
+                text: "Выбирай раздел 👇",
+                replyMarkup: Keyboards.GetStartKeyboard()
+                );
+        }
     }
 }   

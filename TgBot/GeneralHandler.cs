@@ -37,6 +37,7 @@ namespace TgBot
                 { "/refresh", new Action<ITelegramBotClient, Chat>(CustomCommands.Refresh) },
                 { "/help", new Action<ITelegramBotClient, Chat>(CustomCommands.Help) },
                 { "/github", new Action<ITelegramBotClient, Chat>(CustomCommands.Github) },
+                { "назад", new Action<ITelegramBotClient, Chat>(CustomCommands.GetBack) },
                 { "грудь", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Chest) },
                 { "спина", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Back) },
                 { "трапеция", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Trapezium) },
@@ -44,7 +45,6 @@ namespace TgBot
                 { "трицепс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Triceps) },
                 { "пресс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Abs) },
                 { "икры", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Calf) },
-                { "бедра", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Hips) },
             };
 
             if (commands.ContainsKey(messageText.ToLower()))

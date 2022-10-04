@@ -25,12 +25,12 @@ namespace TgBot
                     video: stream!,
                     supportsStreaming: true
                     );
-            }
+            }*/
             await botClient.SendTextMessageAsync(
                 chatId: chat.Id,
                 text: "chest",
                 replyMarkup: Keyboards.GetChestKeyboard()
-                );*/
+                );
 
         }
         public static async void Back(ITelegramBotClient botClient, Chat chat)
@@ -62,5 +62,6 @@ namespace TgBot
         {
             await botClient.SendTextMessageAsync(chat.Id, "trapeziumButton is pressed");
         }
+        
     }
 }

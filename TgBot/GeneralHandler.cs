@@ -39,8 +39,8 @@ namespace TgBot
                 { "/github", new Action<ITelegramBotClient, Chat>(CustomCommands.Github) },
                 { "назад", new Action<ITelegramBotClient, Chat>(CustomCommands.GetBack) },
                 { "грудь", new Action<ITelegramBotClient, Chat>(ChestButtonsHandler.Chest) },
-                { "спина", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Back) },
-                { "трапеция", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Trapezium) },
+                { "спина", new Action<ITelegramBotClient, Chat>(BackButtonsHandler.Back) },
+                { "трапеция", new Action<ITelegramBotClient, Chat>(TrapeziumButtonsHandler.Trapezium) },
                 { "бицепс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Biceps) },
                 { "трицепс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Triceps) },
                 { "пресс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Abs) },
@@ -51,6 +51,10 @@ namespace TgBot
                 { "гиперэкстензия", new Action<ITelegramBotClient, Chat>(BackButtonsHandler.Hyperextension) },
                 { "тяга штанги в наклоне", new Action<ITelegramBotClient, Chat>(BackButtonsHandler.BentOverRows) },
                 { "подтягивания", new Action<ITelegramBotClient, Chat>(BackButtonsHandler.PullUps) },
+                { "cтановая тяга", new Action<ITelegramBotClient, Chat>(TrapeziumButtonsHandler.Deadlift) },
+                { "тяга троса сидя", new Action<ITelegramBotClient, Chat>(TrapeziumButtonsHandler.SeatedCableRow) },
+                { "пожимания плечами", new Action<ITelegramBotClient, Chat>(TrapeziumButtonsHandler.Shrug) },
+               
             };
 
             if (commands.ContainsKey(messageText.ToLower()))

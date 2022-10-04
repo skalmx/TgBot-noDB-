@@ -38,13 +38,16 @@ namespace TgBot
                 { "/help", new Action<ITelegramBotClient, Chat>(CustomCommands.Help) },
                 { "/github", new Action<ITelegramBotClient, Chat>(CustomCommands.Github) },
                 { "назад", new Action<ITelegramBotClient, Chat>(CustomCommands.GetBack) },
-                { "грудь", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Chest) },
+                { "грудь", new Action<ITelegramBotClient, Chat>(ChestButtonsHandler.Chest) },
                 { "спина", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Back) },
                 { "трапеция", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Trapezium) },
                 { "бицепс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Biceps) },
                 { "трицепс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Triceps) },
                 { "пресс", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Abs) },
                 { "икры", new Action<ITelegramBotClient, Chat>(StartButtonsHandler.Calf) },
+                { "жим лежа", new Action<ITelegramBotClient, Chat>(ChestButtonsHandler.BenchPress) },
+                { "отжимания на брусьях", new Action<ITelegramBotClient, Chat>(ChestButtonsHandler.Dips) },
+                { "разведение гантелей", new Action<ITelegramBotClient, Chat>(ChestButtonsHandler.Flys) },
             };
 
             if (commands.ContainsKey(messageText.ToLower()))

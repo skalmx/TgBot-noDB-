@@ -14,7 +14,7 @@ namespace TgBot
         {
             await botClient.SendTextMessageAsync(
                 chatId: chat.Id,
-                text: "back",
+                text: "biceps",
                 replyMarkup: Keyboards.GetBicepsKeyboard()
                 );
         }

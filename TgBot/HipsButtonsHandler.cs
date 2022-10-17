@@ -8,7 +8,7 @@ using Telegram.Bot.Types;
 
 namespace TgBot
 {
-    internal class HipsButtonsHandler
+    static internal class HipsButtonsHandler
     {
         public static async void Hips(ITelegramBotClient botClient, Chat chat)
         {

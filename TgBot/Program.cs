@@ -15,7 +15,7 @@ using System.Configuration;
 
 namespace TgBot
 {
-    public class TelegramBot
+    public class Program
     {
         public static TelegramBotClient botClient = new TelegramBotClient(ConfigurationManager.AppSettings["token"]!);// токен берется с конфигурационного файла 
         public static CancellationTokenSource cancellationToken = new CancellationTokenSource(); 

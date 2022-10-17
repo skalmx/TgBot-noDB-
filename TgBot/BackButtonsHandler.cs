@@ -8,7 +8,7 @@ using Telegram.Bot.Types;
 
 namespace TgBot
 {
-    internal class BackButtonsHandler
+    static internal class BackButtonsHandler
     {
         public static async void Back(ITelegramBotClient botClient, Chat chat)
         {

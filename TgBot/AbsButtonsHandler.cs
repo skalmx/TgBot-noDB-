@@ -8,8 +8,8 @@ using Telegram.Bot.Types;
 
 namespace TgBot
 {
-    internal class AbsButtonsHandler
-    {
+   static internal class AbsButtonsHandler
+   {
         public static async void Abs(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(
@@ -30,5 +30,5 @@ namespace TgBot
         {
             await botClient.SendTextMessageAsync(chat.Id, "Русский твист");
         }
-    }
+   }
 }

@@ -8,7 +8,7 @@ using Telegram.Bot.Types;
 
 namespace TgBot
 {
-    internal class TrapeziumButtonsHandler
+    static internal class TrapeziumButtonsHandler
     {
         public static async void Trapezium(ITelegramBotClient botClient, Chat chat)
         {

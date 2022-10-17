@@ -8,7 +8,7 @@ using Telegram.Bot.Types;
 
 namespace TgBot
 {
-    internal class CalfButtonsHandler
+    static internal class CalfButtonsHandler
     {
         public static async void Calf(ITelegramBotClient botClient, Chat chat)
         {

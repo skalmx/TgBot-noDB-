@@ -8,8 +8,8 @@ using Telegram.Bot.Types;
 
 namespace TgBot
 {
-    internal class ChestButtonsHandler
-    {
+   static internal class ChestButtonsHandler
+   {
         public static async void Chest(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(
@@ -30,5 +30,5 @@ namespace TgBot
         {
             await botClient.SendTextMessageAsync(chat.Id, "разведение гантелей");
         }
-    }
+   }
 }

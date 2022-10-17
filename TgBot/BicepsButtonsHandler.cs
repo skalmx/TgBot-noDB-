@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
+using System.IO;
 
 namespace TgBot
 {
-    internal class BicepsButtonsHandler
+    static internal class BicepsButtonsHandler
     {
         public static async void Biceps(ITelegramBotClient botClient, Chat chat)
         {
@@ -21,6 +22,17 @@ namespace TgBot
         public static async void ConcentrationCurl(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(chat.Id, "Концентрированный подъем");
+            /*await botClient.SendTextMessageAsync(chat.Id, "chestButton is pressed");
+            string path = Directory.GetParent(Environment.CurrentDirectory)!.Parent!.Parent!.FullName + @"\videos\Выпады.mp4";
+            using (var stream = System.IO.File.OpenRead(path))
+            {
+
+                await botClient.SendVideoAsync(
+                    chatId: chat.Id,
+                    video: stream!,
+                    supportsStreaming: true
+                    );
+            }*/
         }
         public static async void ChinUps(ITelegramBotClient botClient, Chat chat)
         {
@@ -31,17 +43,8 @@ namespace TgBot
             await botClient.SendTextMessageAsync(chat.Id, "Подъем штанги");
         }
 
-        /*string path = Directory.GetParent(Environment.CurrentDirectory)!.Parent!.Parent!.FullName + @"\videos\Выпады.mp4";
 
-        await botClient.SendTextMessageAsync(chat.Id, "chestButton is pressed");
-        /* using (var stream = System.IO.File.OpenRead(path))
-         {
 
-             await botClient.SendVideoAsync(
-                 chatId: chat.Id,
-                 video: stream!,
-                 supportsStreaming: true
-                 );
-         }*/
     }
 }
+

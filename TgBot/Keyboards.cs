@@ -9,7 +9,7 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 namespace TgBot
 {
-    internal class Keyboards
+    static internal class Keyboards
     {
         public static ReplyKeyboardMarkup GetStartKeyboard()
         {

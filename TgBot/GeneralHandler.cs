@@ -12,7 +12,7 @@ using System.IO;
 
 namespace TgBot
 {
-    internal class GeneralHandler
+    static internal class GeneralHandler
     {
         
         public static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
@@ -31,7 +31,7 @@ namespace TgBot
 
             Console.WriteLine($"{message.Chat.Username ?? message.Chat.FirstName} wrote {messageText}"); // message.Chat.Username ?? message.Chat.FirstName - имя собеседника
 
-            Dictionary<string,Action<ITelegramBotClient,Chat>> commands = new Dictionary<string, Action<ITelegramBotClient, Chat>>()
+            Dictionary<string, Action<ITelegramBotClient, Chat>> commands = new Dictionary<string, Action<ITelegramBotClient, Chat>>()
             {
                 { "/start", new Action<ITelegramBotClient, Chat>(CustomCommands.Start)},
                 { "/refresh", new Action<ITelegramBotClient, Chat>(CustomCommands.Refresh)},

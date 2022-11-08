@@ -13,8 +13,29 @@
     <None Remove="videos\Жим лежа.mp4" />
     <None Remove="videos\Концентрированный подъем на бицепс.mp4" />
     <None Remove="videos\Отжимания на брусьях.mp4" />
+    <None Remove="videos\Отжимания от скамьи.mp4" />
+    <None Remove="videos\Подтягивания обратным хватом.mp4" />
+    <None Remove="videos\Подтягивания.mp4" />
+    <None Remove="videos\Подъем ног на перекладине.mp4" />
+    <None Remove="videos\Подъем штанги.mp4" />
+    <None Remove="videos\Подъемы на носки.mp4" />
+    <None Remove="videos\Подъемы с весом на коленях.mp4" />
+    <None Remove="videos\Пожимания плечами.mp4" />
+    <None Remove="videos\Приседания со штангой.mp4" />
     <None Remove="videos\Развдение гантелей.mp4" />
     <None Remove="videos\Разведение гантелей.mp4" />
+    <None Remove="videos\Разгибание над головой.mp4" />
+    <None Remove="videos\Разгибания на блоке.mp4" />
+    <None Remove="videos\Разгибания ног сидя.mp4" />
+    <None Remove="videos\Русский твист.mp4" />
+    <None Remove="videos\Скручивания.mp4" />
+    <None Remove="videos\Становая тяга.mp4" />
+    <None Remove="videos\Тяга троса сидя.mp4" />
+    <None Remove="videos\Тяга штанги в наклоне.mp4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="videos\Отжимания от скамьи.mp4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,7 +44,23 @@
     <EmbeddedResource Include="videos\Жим лежа.mp4" />
     <EmbeddedResource Include="videos\Концентрированный подъем на бицепс.mp4" />
     <EmbeddedResource Include="videos\Отжимания на брусьях.mp4" />
+    <EmbeddedResource Include="videos\Подтягивания обратным хватом.mp4" />
+    <EmbeddedResource Include="videos\Подтягивания.mp4" />
+    <EmbeddedResource Include="videos\Подъем ног на перекладине.mp4" />
+    <EmbeddedResource Include="videos\Подъем штанги.mp4" />
+    <EmbeddedResource Include="videos\Подъемы на носки.mp4" />
+    <EmbeddedResource Include="videos\Подъемы с весом на коленях.mp4" />
+    <EmbeddedResource Include="videos\Пожимания плечами.mp4" />
+    <EmbeddedResource Include="videos\Приседания со штангой.mp4" />
     <EmbeddedResource Include="videos\Разведение гантелей.mp4" />
+    <EmbeddedResource Include="videos\Разгибание над головой.mp4" />
+    <EmbeddedResource Include="videos\Разгибания на блоке.mp4" />
+    <EmbeddedResource Include="videos\Разгибания ног сидя.mp4" />
+    <EmbeddedResource Include="videos\Русский твист.mp4" />
+    <EmbeddedResource Include="videos\Скручивания.mp4" />
+    <EmbeddedResource Include="videos\Становая тяга.mp4" />
+    <EmbeddedResource Include="videos\Тяга троса сидя.mp4" />
+    <EmbeddedResource Include="videos\Тяга штанги в наклоне.mp4" />
   </ItemGroup>
 
   <ItemGroup>

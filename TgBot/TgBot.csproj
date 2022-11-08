@@ -8,14 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="videos\Выпады.mp4" />
+    <None Remove="videos\Гиперэкстензия.mp4" />
+    <None Remove="videos\Жим лежа.mp4" />
+    <None Remove="videos\Концентрированный подъем на бицепс.mp4" />
+    <None Remove="videos\Отжимания на брусьях.mp4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="videos\Выпады.mp4" />
+    <EmbeddedResource Include="videos\Гиперэкстензия.mp4" />
+    <EmbeddedResource Include="videos\Жим лежа.mp4" />
+    <EmbeddedResource Include="videos\Концентрированный подъем на бицепс.mp4" />
+    <EmbeddedResource Include="videos\Отжимания на брусьях.mp4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.1" />
     <PackageReference Include="Telegram.Bot" Version="18.0.0" />
     <PackageReference Include="Telegram.Bot.Extensions.Polling" Version="1.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="videos\" />
   </ItemGroup>
 
 </Project>

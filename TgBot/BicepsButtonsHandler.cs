@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Telegram.Bot;
-using Telegram.Bot.Types;
-using System.IO;
-
-namespace TgBot
+﻿namespace TgBot
 {
     static internal class BicepsButtonsHandler
     {

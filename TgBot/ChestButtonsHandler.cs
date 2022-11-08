@@ -6,7 +6,7 @@
         {
             await botClient.SendTextMessageAsync(
                 chatId: chat.Id,
-                text: "Готово!Выбирай упражнение ниже👇",
+                text: "Готово! Выбирай упражнение ниже👇",
                 replyMarkup: Keyboards.GetChestKeyboard()
                 );
         }

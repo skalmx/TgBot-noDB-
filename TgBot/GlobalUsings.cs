@@ -1,6 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿global using Telegram.Bot;
+global using Telegram.Bot.Types;
+global using System;
+global using System.IO;
+global using System.Reflection;
+global using Telegram.Bot.Types.ReplyMarkups;
+global using System.Threading.Tasks;
+global using Telegram.Bot.Types.Enums;
+global using System.Threading;
+global using System.Configuration;

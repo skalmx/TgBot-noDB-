@@ -13,6 +13,8 @@
     <None Remove="videos\Жим лежа.mp4" />
     <None Remove="videos\Концентрированный подъем на бицепс.mp4" />
     <None Remove="videos\Отжимания на брусьях.mp4" />
+    <None Remove="videos\Развдение гантелей.mp4" />
+    <None Remove="videos\Разведение гантелей.mp4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +23,7 @@
     <EmbeddedResource Include="videos\Жим лежа.mp4" />
     <EmbeddedResource Include="videos\Концентрированный подъем на бицепс.mp4" />
     <EmbeddedResource Include="videos\Отжимания на брусьях.mp4" />
+    <EmbeddedResource Include="videos\Разведение гантелей.mp4" />
   </ItemGroup>
 
   <ItemGroup>

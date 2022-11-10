@@ -12,6 +12,7 @@
     <None Remove="videos\Гиперэкстензия.mp4" />
     <None Remove="videos\Жим лежа.mp4" />
     <None Remove="videos\Концентрированный подъем на бицепс.mp4" />
+    <None Remove="videos\Концентрированный подъем.mp4" />
     <None Remove="videos\Отжимания на брусьях.mp4" />
     <None Remove="videos\Отжимания от скамьи.mp4" />
     <None Remove="videos\Подтягивания обратным хватом.mp4" />
@@ -35,6 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="videos\Концентрированный подъем.mp4" />
     <EmbeddedResource Include="videos\Отжимания от скамьи.mp4" />
   </ItemGroup>
 
@@ -42,7 +44,6 @@
     <EmbeddedResource Include="videos\Выпады.mp4" />
     <EmbeddedResource Include="videos\Гиперэкстензия.mp4" />
     <EmbeddedResource Include="videos\Жим лежа.mp4" />
-    <EmbeddedResource Include="videos\Концентрированный подъем на бицепс.mp4" />
     <EmbeddedResource Include="videos\Отжимания на брусьях.mp4" />
     <EmbeddedResource Include="videos\Подтягивания обратным хватом.mp4" />
     <EmbeddedResource Include="videos\Подтягивания.mp4" />

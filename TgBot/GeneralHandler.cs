@@ -40,7 +40,7 @@
                 { "гиперэкстензия", new Action<ITelegramBotClient, Chat>(BackButtonsHandler.Hyperextension)},
                 { "тяга штанги в наклоне", new Action<ITelegramBotClient, Chat>(BackButtonsHandler.BentOverRows)},
                 { "подтягивания", new Action<ITelegramBotClient, Chat>(BackButtonsHandler.PullUps)},
-                { "cтановая тяга", new Action<ITelegramBotClient, Chat>(TrapeziumButtonsHandler.Deadlift)},
+                { "становая тяга", new Action<ITelegramBotClient, Chat>(TrapeziumButtonsHandler.Deadlift)},
                 { "тяга троса сидя", new Action<ITelegramBotClient, Chat>(TrapeziumButtonsHandler.SeatedCableRow)},
                 { "пожимания плечами", new Action<ITelegramBotClient, Chat>(TrapeziumButtonsHandler.Shrug)},
                 { "концентрированный подъем", new Action<ITelegramBotClient, Chat>(BicepsButtonsHandler.ConcentrationCurl)},

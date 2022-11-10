@@ -14,7 +14,7 @@ namespace TgBot
         {
             await botClient.SendTextMessageAsync(
                 chatId: chat.Id,
-                text: "triceps",
+                text: "Готово! Выбирай упражнение ниже👇",
                 replyMarkup: Keyboards.GetTricepsKeyboard()
                 );
         }

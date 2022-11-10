@@ -6,32 +6,48 @@
         {
             await botClient.SendTextMessageAsync(
                 chatId: chat.Id,
-                text: "biceps",
+                text: "Готово! Выбирай упражнение ниже👇",
                 replyMarkup: Keyboards.GetBicepsKeyboard()
                 );
         }
         public static async void ConcentrationCurl(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(chat.Id, "Концентрированный подъем");
-            /*await botClient.SendTextMessageAsync(chat.Id, "chestButton is pressed");
-            string path = Directory.GetParent(Environment.CurrentDirectory)!.Parent!.Parent!.FullName + @"\videos\Выпады.mp4";
-            using (var stream = System.IO.File.OpenRead(path))
-            {
 
+            using (Stream resourceStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(@"TgBot.videos.Концентрированный подъем.mp4")!) // получить текущую строку и запустить "stream" для воспроизведения видео
+            {
                 await botClient.SendVideoAsync(
                     chatId: chat.Id,
-                    video: stream!,
+                    video: resourceStream!,
                     supportsStreaming: true
                     );
-            }*/
+            }
         }
         public static async void ChinUps(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(chat.Id, "Подтягивания обратным хватом");
+
+            using (Stream resourceStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(@"TgBot.videos.Подтягивания обратным хватом.mp4")!) // получить текущую строку и запустить "stream" для воспроизведения видео
+            {
+                await botClient.SendVideoAsync(
+                    chatId: chat.Id,
+                    video: resourceStream!,
+                    supportsStreaming: true
+                    );
+            }
         }
         public static async void Curl(ITelegramBotClient botClient, Chat chat)
         {
             await botClient.SendTextMessageAsync(chat.Id, "Подъем штанги");
+
+            using (Stream resourceStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(@"TgBot.videos.Подъем штанги.mp4")!) // получить текущую строку и запустить "stream" для воспроизведения видео
+            {
+                await botClient.SendVideoAsync(
+                    chatId: chat.Id,
+                    video: resourceStream!,
+                    supportsStreaming: true
+                    );
+            }
         }
 
 
